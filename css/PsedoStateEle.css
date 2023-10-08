@@ -1,0 +1,105 @@
+.btn{
+    color: white;
+    background-color: green;
+    width: 187px;
+    border-radius: 30px;
+    padding: 21px 21px;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+/* pseudo state-->> Selector/element : pseudo state {property:value}*/
+
+button.btn:hover{
+    background-color: cadetblue;
+    color: red;
+    cursor: pointer;
+}
+
+.submit-btn{
+    color: white;
+    background-color: rgb(240, 114, 56);
+    width: 187px;
+    border-radius: 30px;
+    padding: 21px 21px;
+    font-size: 20px;
+    text-align: center;
+}
+
+div.main div button.submit-btn:hover{
+    background-color: rgb(5, 62, 63);
+    color: red;
+    cursor:pointer;
+}
+
+div div div.container div.container1 button:hover{
+    background-color: rgb(5, 62, 63);
+    color: rgb(98, 255, 0);
+    cursor:pointer;
+    font-size: 20px;
+}
+
+input.input-box1:focus{
+    background-color: coral;
+}
+
+input.input-box2:focus{
+    background-color: antiquewhite;
+}
+
+a:link{
+    color: aqua;
+}
+a:active{
+    color: yellow;
+    font-size: 50px;
+}
+a:visited{
+    color: tomato;
+} 
+
+p.f-line::first-line{
+    color: tomato;
+    font-size: 30px;
+    font-family: 'Courier New';
+}
+
+p.f-letter::first-letter{
+    font-size: 40px;
+    color: red;
+}
+
+::marker{
+    color: aqua;
+}
+
+div::selection{
+    background-color: yellow;
+    color: red;
+}
+
+input[type='password']{
+    background-color: aquamarine;
+    width:300px
+}
+.inp-state{
+   background-color: yellowgreen;
+   width: 350px;
+   height : 30px;
+   font-size: 20px;
+}
+
+/* universal selector */
+/* *{
+background-color: pink;
+
+
+} */
+
+body {
+
+    background-image: url('nature1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

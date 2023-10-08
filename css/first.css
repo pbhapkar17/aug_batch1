@@ -1,0 +1,31 @@
+#spantag {
+    color:blueviolet;
+    font-size: 30px;
+}
+
+#para{
+    background-color: burlywood;
+}
+
+h4,h5 {
+   text-align: center;
+   color: rgb(85, 22, 220);
+   font-size: 30px;
+}
+
+/* class selector */
+/* .(period operator)className { properties:value} */
+.div-container{
+    color:aqua;
+    font-size: 20px;
+}
+
+.para1{
+    background-color: yellowgreen;
+    font-size: 50px;
+}
+
+.para1{
+  background-color: yellow;  
+  color: brown;
+}
