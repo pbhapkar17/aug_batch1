@@ -1,0 +1,60 @@
+/* table{
+    border: 2px solid greenyellow;
+}
+th{
+    border: 2px solid greenyellow;
+}
+td{
+    border: 2px solid greenyellow;
+} */
+
+/* table,th,td{
+    border: 2px solid greenyellow;
+    border-collapse: collapse;
+    padding: 10px 10px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+th{
+    font-size: 30px;
+    background-color: tomato;
+    font-family: 'Courier';
+}
+td{
+    background-color: turquoise;
+    font-size: 20px;
+    font-family: 'Courier New';
+}
+
+h1{
+    margin: auto;
+    color: violet;
+    text-align: center;
+} */
+
+
+.table-main{
+    border: 2px solid greenyellow;
+    border-collapse: collapse;
+    padding: 10px 10px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.table-heading{
+    font-size: 30px;
+    background-color: tomato;
+    font-family: 'Courier';
+}
+.table-data{
+    background-color: turquoise;
+    font-size: 20px;
+    font-family: 'Courier New';
+}
+
+.table-main-heading{
+    margin: auto;
+    color: violet;
+    text-align: center;
+}
