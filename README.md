@@ -10,7 +10,6 @@
 1 way::>> From remote(Git Hub)
 8.clone branch  >> git clone https://github.com/pbhapkar17/aug_batch1 -b html_css_Aug  >enter >it will clone(copy) ur repo to local
 
-
 9. open cloned folder into vscode
 10. copied html css folder and pasted inside cloned folder.
 11. git add .
