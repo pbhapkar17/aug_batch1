@@ -45,6 +45,7 @@ To check branch>>
  git branch -a  
 
 
+Git Pull:
 
 
 
