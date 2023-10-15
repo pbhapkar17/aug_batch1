@@ -65,6 +65,7 @@ console.log(BigInt(c));
 let d = 9999999999999999n
 console.log(d);
 
+let k = null;
 
 //array : is used to store multiple items
 let name = "pooja live in mumbai, mumbai is big city" 
@@ -78,5 +79,5 @@ console.log(typeof(cities)); //array data type is always object
 console.log(cities[4]); //kolhapur
 console.log(cities[10]);//undefined
 console.log(cities.length);
-console.log(cities[0]);
-console.log(cities[cities.length - 1 ]);
+console.log(cities[0]); //pune
+console.log(cities[cities.length - 1 ]); //sangli
