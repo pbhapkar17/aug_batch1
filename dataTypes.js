@@ -73,6 +73,7 @@ console.log(name);
 
 let cities = []; //empty array
 
+//homogenous array
 cities = ['pune','mumbai','nashik','satara','kolhapur','sangali'];
 console.log(cities);
 console.log(typeof(cities)); //array data type is always object
@@ -81,3 +82,24 @@ console.log(cities[10]);//undefined
 console.log(cities.length);
 console.log(cities[0]); //pune
 console.log(cities[cities.length - 1 ]); //sangli
+console.log('data type of cities>>',typeof(cities));
+
+//hetrogenous array
+let hetroArray = ['poonam',505000,test(),true,null,undefined,'pooja'];
+console.log(hetroArray[2]);
+
+function test(){
+ // return 'poonam';
+}
+
+//let cars = {} //object >> {key:value}
+
+let cars = { 
+    carName : "Swift",
+    carPrice : 800000,
+    carColor : "white"
+}
+
+console.log(cars.carName);
+console.log(cars.carColor);
+console.log(typeof(cars));
