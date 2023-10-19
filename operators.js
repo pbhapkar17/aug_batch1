@@ -28,3 +28,19 @@ console.log(">", f > e); //false it will check only for values
 console.log("<", e < f); //true
 
 console.log("<=", e <= f)  //less than equal to operator
+
+//&& AND : T && T --> T ,else F
+
+console.log( e < f  && f == e );
+
+// || OR F || F --> F , else T
+
+console.log( e < f ||  f == e );
+console.log( e < f ||  f == e  &&  a != b);
+
+console.log( a !== b); //value and DT
+
+let x = 20;
+let y = 30;
+let res = x + y;
+console.log(res);
