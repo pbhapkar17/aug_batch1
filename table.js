@@ -4,7 +4,7 @@ function addNumber(){
     for(let i = 1 ; i <=10; i++){
          res = number * i;
        console.log(res);  
-       document.write(res, "\n")  ;
+       document.write(res, "<br>")  ;
     }
-    //document.getElementById("table").innerHTML = number + '<br>'
+    document.getElementById("table").innerHTML = res + '<br>'
    }
