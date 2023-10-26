@@ -66,3 +66,20 @@ console.log(data.trim());
 var string = "    This    should  become   something          else   too . ";
 stringData = string.trim().replace(/\s+/g, " ");
 console.log(stringData);
+
+//toString()
+let num = 65656565;
+let data1 = num.toString();
+console.log(data1);
+
+
+
+let text1 = "HELLO WORLD";
+let char = text1.charAt(0);
+console.log(char);
+
+//split()
+let date = "04-april-1992";
+let newDate = date.split('-')  //it splits out data and will return array.
+console.log(newDate);
+console.log(newDate[2]);
