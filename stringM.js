@@ -77,9 +77,56 @@ console.log(data1);
 let text1 = "HELLO WORLD";
 let char = text1.charAt(0);
 console.log(char);
+let d = text1.charAt(20);
+console.log(d); // it will return empty
 
 //split()
 let date = "04-april-1992";
 let newDate = date.split('-')  //it splits out data and will return array.
 console.log(newDate);
 console.log(newDate[2]);
+
+let num2= "65656565";
+let m = parseInt(num2)
+console.log(m);
+
+let text4 = "cvv cvfbfbf vbgbgb vbgbgb vbgbgb";
+t5 = text4.split(" ");
+console.log(t5);
+
+let add = "bxh jsbxhjsbx poonam chsbhxbshb";
+console.log(add.includes("poonam")); //include method returns true if value is include in data else will return false
+
+// {
+ //"status":"success", 
+// "statusCode":"100256",
+//  massage:"data submited successfully"
+// }
+
+let statusCode ="100256";
+let a = statusCode.startsWith("100");
+console.log(a);
+console.log(statusCode.endsWith("56"));
+
+let text5 = "Hello to world, welcome to the to universe.";
+// let result = text5.indexOf("to");  //it should return first match of index 
+let result = text5.indexOf("toooo");  //-1
+console.log(result);
+console.log(text5.lastIndexOf("to"));
+console.log(text5.lastIndexOf("toooooo")); //-1
+
+let text6 = "Mr. Blue has a blue house";
+//let position = text6.search("blue");
+let position = text6.search(/blue/i);  //we can add regex patteren 
+console.log(position);//diff betw search and indexOf method : we cannot pass reg ex pattern to indexOf
+
+// The search() cannot take a start position argument.
+// The indexOf() method cannot search against a regular expression.
+// The search() method returns the position of the first match.
+// The match() method returns an array of matches.
+
+let text7 = "The rain in SPAIN stays mainly in the plain";
+
+let g = text7.match("ain");
+console.log(g);
+console.log( text7.match(/ain/g));
