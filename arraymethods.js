@@ -46,10 +46,20 @@ cl3  = [];
 let cl4 = cl2.concat(cl3,v,"white") ;
 console.log(cl4);
 
-//delete
+//delete: undefined holes 
+ //length remains same after deleting item
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-delete fruits[1];
-console.log(fruits);
-console.log(fruits.length); //length remains same after deleting item
+delete fruits[0];
+//delete fruits[10];
+console.log('>>>',fruits);
 
-//
+//splice(index(where u want to add item), count(how many elements want to delete, elements to be added))
+const fruit1 = ["Banana", "Orange", "Apple", "Mango"];
+ //fruit1.splice(1,0,'kiwi');
+ fruit1.splice(1,2,'kiwi');
+console.log(fruit1);
+
+const fruit2 = ["Banana", "Orange", "Apple", "Mango",'kiwi'];
+let a = fruit2.slice(2,3);
+console.log(a);
+console.log(fruit2);
