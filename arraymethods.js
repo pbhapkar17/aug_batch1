@@ -63,3 +63,18 @@ const fruit2 = ["Banana", "Orange", "Apple", "Mango",'kiwi'];
 let a = fruit2.slice(2,3);
 console.log(a);
 console.log(fruit2);
+
+
+//number mrthods
+let no = 787787;
+let no1 = no.toString();
+console.log(no1);
+
+//toFixed()
+let weigth = 4.567496;
+let w2 = weigth.toFixed(3);
+console.log(w2);
+
+//valueOf()
+let r = 5656;
+console.log(r.valueOf());
