@@ -10,7 +10,7 @@ for(let i = 0 ; i < numbers.length ; i++){
 console.log(num);
 
 //using forEach() array itr method  // break and contiue kaywords we cannot apply with forEach
-let num2=[]
+let num2=[];
 numbers.forEach(item => {
     if(item != 9){
          num2.push(item)
@@ -67,18 +67,47 @@ console.log(fruits.lastIndexOf("Orange"));
 //map()
 emp = [
      {
-          empName: "pooja", city: "pune"
+          empName: "pooja", city: "pune",age:30
      },
      {
-          empName: "Pravin", city: "satara"
+          empName: "Pravin", city: "satara",age:20
      },
      {
-          empName: "Sagar", city: "Nashik"
+          empName: "Sagar", city: "Nashik",age:40
      }
 ]
 
-let names = emp.map(empData=>{
+let names = emp.map(empData=>{  //returns array['sagar','pravin']
     return empData.empName;
 })
 
 console.log(names);
+
+// let nameObj = emp.map(({empName,city})=>({empName,city}))
+//  console.log(nameObj);
+let nameObj = emp.map(({empName})=>({empName}))  //[{empName:"Sagar"},{}]
+ console.log(nameObj);
+
+ let chars = [50,55,44,11,44,22,33,44,77];
+
+//  Objects are used for storing keyed collections.
+//  Arrays are used for storing ordered collections.
+
+const array = [10, 20, 30,20, 40,20, 50,88,20];
+const searchElement = 20;
+let foundIndex=[];
+
+array.forEach((element, index) => {
+  if (element === searchElement) {
+    foundIndex.push(index);
+  }
+});
+
+console.log(foundIndex); // Output: 2
+
+
+//includes()//true/false
+
+const array1 = [10, 20, 30,20,20, 50,88,20];
+console.log(array1.includes(40));//false
+
