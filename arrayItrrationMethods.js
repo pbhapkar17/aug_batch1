@@ -38,12 +38,12 @@ for(let i = 1 ; i <= 50 ; i++){
 const item = [1,2,3,4,5,6,7,4,9,10];
 item.forEach(ele=>{
      if(ele >=3 && ele <=9){
-          document.write(ele,'<br>');
+          // document.write(ele,'<br>');
      }
 })
 
 item.push(44)
-document.write(item)
+// document.write(item)
 
 
 // const n = [1,2,3,4,5,6,7,8,9,10]
@@ -124,4 +124,12 @@ console.log(char2);
 
   console.log(data);
   
-
+//using includes()
+let uniqueEle = [];
+char.forEach((ele,i)=>{
+     if(!uniqueEle.includes(ele))
+     {
+          uniqueEle.push(ele)
+     }
+})
+console.log(uniqueEle);
