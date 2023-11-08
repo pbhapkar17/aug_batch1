@@ -5,19 +5,27 @@
 //scope level diff:
 //let,const:block level scope , var : function level scope
 
-function test(){
-   let a = 10;
-    if(a < 20){
-      let b = 30;  //
-      var c = 60;
-      const d = 70
-    }
-    console.log(c);
-    // console.log(d);
-    // console.log(b);
+var z = 90; //global variable
+
+function test() {
+  let a = 10;
+  if (a < 20) {
+    const b = 30;  //
+    var c = 60;
+    const d = 70
+    console.log(b);
+
+  }
+  console.log(c);
+  // console.log(d);
+   //console.log(b);
+  console.log('z', z);
 }
 
+console.log('z',z);
+// console.log('c',c);
 console.log(test());
+
 
 //Redeclaration is not possible with let,const keyword
 //Redeclaration is posible with var keyword
@@ -58,5 +66,24 @@ r = 67;
 // y = 90;
 
 const y = 90;
+
+
+//function:parametrised,parameterless
+//use : to implement logic
+function multiplication(){
+  //code block
+  console.log('parameterless fun');
+   let a = 20;
+   let b = 30;
+   res = a * b;
+   console.log('res',res);
+}
+
+//argument/parameter
+function division(a,b){
+   res = a / b;
+  console.log('parametrised fun',res);
+}
+
 
 
