@@ -36,7 +36,7 @@ for(let i = 1 ; i <= 50 ; i++){
 }
 
 const item = [1,2,3,4,5,6,7,4,9,10];
-item.forEach(ele=>{
+item.forEach(ele => {
      if(ele >=3 && ele <=9){
           // document.write(ele,'<br>');
      }
@@ -51,7 +51,7 @@ item.push(44)
 // console.log(n);
 
 //find() it will return fist match that passess your test condition
-let no = item.find(item=>{
+let no = item.find(item => {
     return item > 7;
 })
 console.log(no);  //9
