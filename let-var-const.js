@@ -28,7 +28,7 @@ console.log(test());
 
 
 //Redeclaration is not possible with let,const keyword
-//Redeclaration is posible with var keyword
+//Redeclaration is possible with var keyword
 // const city = 'pune';
 // const city = "mumbai";
 // let city = 'pune';
@@ -37,7 +37,7 @@ console.log(test());
 var city = 'pune';
 var city = "mumbai";
 
-//reassigning value to the variable is possiblw with let , var keyword but
+//reassigning value to the variable is possible with let , var keyword but
 //not possible with const keyword
 
 let marks = 50;

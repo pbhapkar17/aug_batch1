@@ -1,40 +1,40 @@
-//if condition, if else, else if, switch
+// //if condition, if else, else if, switch
 
-let items = 40;
+// let items = 40;
 
-// if(){
-//code block
+// // if(){
+// //code block
+// // }
+
+// //items greater than or equal to 50 
+// if (items >= 30) {
+//    console.log("stock available");
 // }
 
-//items greater than or equal to 50 
-if (items >= 50) {
-   console.log("stock available");
-}
-
-//if else
-if (items >= 50) {
-   console.log("stock is available");
-}
-else {
-   console.log("limited stock available");
-}
+// //if else
+// if (items >= 50) {
+//    console.log("stock is available");
+// }
+// else {
+//    console.log("limited stock available");
+// }
 
 
-//else if :miultiple conditions comparision
+// //else if :miultiple conditions comparision
 
-if (items >= 50) {
-   document.write("stock is available");
-}
-else if (items >= 20 && items <= 50) {
-   document.write("few itmes left");
-}
-else if (items >= 1 && items <= 20) {
-   document.write("Hurry Up few stock availble");
-}
-else {
-   document.write(" Out of stock");
-}
-document.write('<br>','<br>');
+// if (items >= 50) {
+//    document.write("stock is available");
+// }
+// else if (items >= 20 && items <= 50) {
+//    document.write("few itmes left");
+// }
+// else if (items >= 1 && items <= 20) {
+//    document.write("Hurry Up few stock availble");
+// }
+// else {
+//    document.write(" Out of stock");
+// }
+// document.write('<br>','<br>');
 
 //equality
 let playerName = 'virat kohali';

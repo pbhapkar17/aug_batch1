@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="function.html">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try It Yourself</title>
+</head>
+<body>
+    <p id="demo">sum will be printed here</p>
+
+    <button onclick="addNumbers(10,20)">Add</button>
+
+    <script>
+        function addNumbers (num1,num2){
+            let sum=num1+num2;
+
+            document.getElementById("demo").innerHTML=sum;
+
+
+        }
+        
+
+
+    </script><br><br>
+    <button id="demo" onclick="showdialog()">show dialog box</button>
+    <script>
+        function showdialog() {
+            alert("hello world")
+        }
+    </script><hr>
+
+    <button onclick="showpopup()">submit</button>
+    <script>
+        function showpopup(){
+            alert("please submit again!")
+        }
+    </script>
+
+
+
+</body>
+</html>
