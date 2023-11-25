@@ -18,6 +18,17 @@ export class DatabindingComponent {
 
 
  data : string = "We live in Kolhapur";
+ amount : number = 900000;
+ schoolName! : string;
+ isMatch=true;
+ name ="poonam...";
+ x=7;
+ 
+//  = :assigment oprator: to assign value to the var/prop
+//  == : equality operator : it compares value only
+//  ===  : it compares value as well as data type 
 
-
+  test(){
+    return 50*2;
+  }
 }
