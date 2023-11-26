@@ -13,7 +13,7 @@ export class DatabindingComponent {
  //String Interpolation is a one-way databinding technique which is used to display data from ts to view(template) using curly braces
  // 2.Property Binding []
  //3.Event Binding()
- //2.Two Way data binding [()]
+ //2.Two Way data binding [(ngModel)]
 
 
 
@@ -23,6 +23,8 @@ export class DatabindingComponent {
  isMatch=true;
  name ="poonam...";
  x=7;
+ clickEventData:any;
+ city:any ;
  
 //  = :assigment oprator: to assign value to the var/prop
 //  == : equality operator : it compares value only
@@ -30,5 +32,9 @@ export class DatabindingComponent {
 
   test(){
     return 50*2;
+  }
+
+  clickEvent(){
+     this.clickEventData = 898664;
   }
 }
