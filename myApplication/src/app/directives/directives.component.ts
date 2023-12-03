@@ -31,6 +31,7 @@ isShow = true; //null/undefined/false >> false
 
 cars = ["i10",'i20',"swift","jaguar"];
 showDiv = true;
+fruit="pappaya";
 
 toggle(){
   //this.showDiv = false;
