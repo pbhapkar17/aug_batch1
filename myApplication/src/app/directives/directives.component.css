@@ -5,3 +5,22 @@
     width: 100px;
 
 }
+.info{
+    color: aqua;
+    border: 1px solid blue;
+}
+.adminCls{
+    background-color: rgb(27, 237, 34);
+    height: 100px;
+    width: 100px;
+}
+.mentorCls{
+    background-color: rgb(213, 31, 131);
+    height: 100px;
+    width: 100px;
+}
+.studentCls{
+    background-color: rgb(31, 40, 213);
+    height: 100px;
+    width: 100px;
+}

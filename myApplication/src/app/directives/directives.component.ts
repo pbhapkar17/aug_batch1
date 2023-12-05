@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent {
-
+   user:string = "Mentor";
 
   //directives are used to manipulate the DOM. By using Angular directives, 
   //you can change the appearance, behavior or a layout of a DOM element

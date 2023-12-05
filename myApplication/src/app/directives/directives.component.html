@@ -28,3 +28,32 @@
     my fav fruit is pappaya
 </div>
 </div>
+<br>
+<div class="info adminCls ">
+    I Like Pune
+</div>
+<br>
+<div [ngClass]="{'adminCls' : user == 'Admin',
+                 'mentorCls' : user == 'Mentor',
+                 'studentCls' : user == 'Student' }">
+             
+    Welcome to app
+</div>
+<br>
+
+<div [class.adminCls] = "user == 'Admin'"
+     [class.mentorCls] = "user == 'Mentor'"
+     [class.studentCls] = "user == 'Student'">
+   
+     WelCome
+
+</div>
+
+<div style = "color:blueviolet;">
+Welcome
+</div>
+
+<div [ngStyle] = "user =='Admin' ? {'background-color': 'yellow'} 
+           : {'background-color': 'black'}">
+    Welcome
+</div>
