@@ -1,0 +1,8 @@
+<p>parent works!</p>
+<input type="text" [(ngModel)]="city"> enter city
+<br>
+
+{{state}}
+<br><br>
+-----------------------------------------------------------------------
+<app-child [cityName]="city" (data)="dataFromChild($event)"></app-child>
