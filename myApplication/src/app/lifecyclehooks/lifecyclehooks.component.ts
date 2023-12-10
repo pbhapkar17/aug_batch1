@@ -9,7 +9,7 @@ import { DataService } from '../data.service';
 export class LifecyclehooksComponent {
 
   name: any; //noraml prop
-  //@Input() surName:any;  //input property
+  @Input() surName:any;  //input property
 
   constructor(private dataService: DataService) {
     console.log("constructor calling..");
@@ -25,7 +25,7 @@ export class LifecyclehooksComponent {
   //ngAfterContentChecked()
   //ngAfterViewInit()
   //ngAfterViewChecked()
-  ngOnchange() {
+  ngOnChanges() {
     console.log("onchanges calling");
   }
   
