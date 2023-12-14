@@ -30,7 +30,9 @@ export class LifecyclehooksComponent {
   }
   
   ngOnInit() {
-
+    this.dataService.data.next("poonam...");
+    console.log("Subj",  this.dataService.data);
+    
     this.name = this.dataService.userName;
     console.log("oninit calling");
 
@@ -59,5 +61,11 @@ export class LifecyclehooksComponent {
 
   ngOnDestroy() {
     console.log("ngOnDestroy ");
+  }
+  getData(){
+    this.dataService.data.subscribe(data=>{
+      console.log(data);
+     
+     })
   }
 }
