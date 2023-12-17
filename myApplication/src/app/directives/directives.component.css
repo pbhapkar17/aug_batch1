@@ -24,3 +24,17 @@
     height: 100px;
     width: 100px;
 }
+
+tr,td,th,table{
+    border: 2px solid orangered;
+    background-color: cadetblue;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px 5px;
+    margin: auto;
+}
+.table-cont{
+    margin: auto;
+    text-align: center;
+    padding: 5px 5px;
+}

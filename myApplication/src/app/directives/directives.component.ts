@@ -10,11 +10,23 @@ export class DirectivesComponent {
   public user:string = "Mentor";
    city = "pune"
    isShow = true; //null/undefined/false >> false
-   
+   searchText:any;
    cars = ["i10",'i20',"swift","jaguar"];
    showDiv = true;
    fruit="pappaya";
-
+   tableHeading = ["Name","Contact","City","age"];
+   tableData = [
+    {name:"Pooja",contact:98989898,City:"Pune",age:20},
+    {name:"om",contact:98989898,City:"Pune",age:20},
+    {name:"jay",contact:98989898,City:"Pune",age:20},
+    {name:"nitin",contact:98989898,City:"Pune",age:20},
+    {name:"rakesh",contact:98989898,City:"Pune",age:20},
+    {name:"shiv",contact:98989898,City:"Pune",age:20},
+    {name:"Pooja",contact:98989898,City:"Pune",age:20},
+    {name:"Pooja",contact:98989898,City:"Pune",age:20},
+    {name:"Pooja",contact:98989898,City:"Pune",age:20},
+    {name:"Pooja",contact:98989898,City:"Pune",age:20}
+   ]
    constructor(private  dataService : DataService){}
   //directives are used to manipulate the DOM. By using Angular directives, 
   //you can change the appearance, behavior or a layout of a DOM element
