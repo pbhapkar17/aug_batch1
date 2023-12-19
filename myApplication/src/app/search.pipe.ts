@@ -5,10 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SearchPipe implements PipeTransform {
 
-  transform(value: any, searchText:any): any {
+  transform(data: any, searchText:any): any {
     console.log("pipe calling..");
-    
-    return null;
+ 
+      let text = searchText?.toLowerCase();
+      console.log(text);
+      return data.filter((ele:any)=>{
+       return JSON.stringify(ele).toLowerCase().includes(text)
+       })
+
   }
 //Pipes are simple functions that accept an input and return a transformed value 
 // /A pure change is when the change detection cycle detects a change to either a primitive input value (such as String, Number, Boolean, 
