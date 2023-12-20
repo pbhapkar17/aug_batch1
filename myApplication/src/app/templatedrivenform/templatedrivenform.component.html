@@ -1,0 +1,20 @@
+<div>
+    <form class="form-container" #loginForm = "ngForm" (ngSubmit)="submit(loginForm)">
+        <h2>Login</h2>
+        <div>
+            <label > User Name</label><br>
+            <input type="text" ngModel name="userName" id="" required><br>
+            <!-- <span *ngIf="userName?.errors?.['required']" class="error">User Name is required</span> -->
+        </div>
+        <div>
+            <label > Password</label><br>
+            <input type="text" ngModel name="password">
+        </div>
+        <!-- <div>
+            <button (click)="submit(loginForm)">Submit</button>
+        </div> -->
+        <div>
+            Not an Acount? Create Acount.
+        </div>
+    </form>
+</div>
