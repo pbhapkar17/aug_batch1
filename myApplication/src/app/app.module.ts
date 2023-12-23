@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { DatabindingComponent } from './databinding/databinding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 import { ParentComponent } from './parent/parent.component';
@@ -17,6 +17,7 @@ import { SubComponent } from './sub/sub.component';
 import { Sub2Component } from './sub2/sub2.component';
 import { SearchPipe } from './search.pipe';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
+import { SignUpReactiveFormComponent } from './sign-up-reactive-form/sign-up-reactive-form.component';
 
 @NgModule({
   declarations: [ //component/pipe/directive
@@ -34,13 +35,15 @@ import { TemplatedrivenformComponent } from './templatedrivenform/templatedriven
     Sub2Component,
     SearchPipe,
     TemplatedrivenformComponent,
+    SignUpReactiveFormComponent,
     
     
   ],
   imports: [  //modules
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class TemplatedrivenformComponent {
  
-
+ 
 
   submit(form:any){
     console.log("form obj", form.value);
     
   }
+
+
 }
