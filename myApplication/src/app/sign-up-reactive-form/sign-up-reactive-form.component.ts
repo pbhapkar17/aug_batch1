@@ -21,8 +21,8 @@ export class SignUpReactiveFormComponent {
 
      this.signUpForm = this.formBuilder.group({
       name : ['',[Validators.required]],
-      mobile : [],
-      pancard:[''],
+      mobile : [,[Validators.maxLength(10)]],
+      pancard:['',[Validators.pattern('^[A-Z]{5}[0-9]{4}[A-Z]{1}$'),Validators.maxLength(10)]],
       email:[''],
       pass:[''],
       confirmPass:['']
