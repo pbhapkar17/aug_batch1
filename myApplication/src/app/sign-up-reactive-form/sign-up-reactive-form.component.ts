@@ -9,7 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class SignUpReactiveFormComponent {
 
   signUpForm!: FormGroup;
-
+  show:boolean=false;
+  showPassword :boolean=false;
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -31,5 +32,12 @@ export class SignUpReactiveFormComponent {
   submit(){
     console.log(this.signUpForm.value);
     
+  }
+
+  toShowPassword(){
+    //  this.showPassword= true;
+    //  this.show = true
+    this.showPassword = !this.showPassword;
+    this.show = !this.show ;
   }
 }

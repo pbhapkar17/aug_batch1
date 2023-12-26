@@ -28,3 +28,18 @@ Template: The template defines the structure and layout of the component's UI. I
 Class: The class represents the component's behavior and state. It is written in TypeScript and contains properties, methods, and lifecycle hooks that define how the component behaves. 
 
 Metadata: The metadata is defined using a decorator (@Component) in Angular. It provides additional information about the component
+
+to install boostrap
+npm install bootstrap --save
+
+npm i bootstrap-icons
+
+ "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
+
+style.css : @import "~bootstrap-icons/font/bootstrap-icons.css";
