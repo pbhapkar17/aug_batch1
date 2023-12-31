@@ -2,12 +2,12 @@
 
   <form [formGroup]="signUpForm" class="form-container">
     <label>Name</label><br>
-    <input type="text" formControlName="name"><br>
+    <input type="text" formControlName="name" maxlength="10" ><br>
     <span class="err" *ngIf="signUpForm.get('name')?.hasError('required') 
       && signUpForm.get('name')?.touched">Name is required
     </span><br>
     <label>Mob No</label><br>
-    <input type="text" formControlName="mobile"><br>
+    <input type="text" formControlName="mobile" appNumbersOnly><br>
     <span class="err" *ngIf="signUpForm.get('mobile')?.hasError('maxlength')">
       maximum 10 numbers are allowed
     </span><br>
