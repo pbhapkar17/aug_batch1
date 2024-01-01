@@ -9,7 +9,7 @@ export class NumbersOnlyDirective {
 
   @HostListener('input', ['$event'])
   onInputChange(){
-    console.log("direc",this.element.nativeElement.value);
+  
     let inputBoxdata = this.element.nativeElement.value;
     this.element.nativeElement.value  = inputBoxdata.replace(/[^0-9]*/g, '')
   }

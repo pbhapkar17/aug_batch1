@@ -21,13 +21,22 @@ export class SignUpReactiveFormComponent {
   formLoad() {
 
      this.signUpForm = this.formBuilder.group({
-      name : ['',[Validators.required]],
-      mobile : [,[Validators.maxLength(10)]],
+      name : ['Poonam',[Validators.required]],
+      mobile : [989898989,[Validators.maxLength(10)]],
       pancard:['',[Validators.pattern('^[A-Z]{5}[0-9]{4}[A-Z]{1}$'),Validators.maxLength(10)]],
       email:[''],
       pass:[''],
-      confirmPass:['']
+      confirmPass:[''],
+      city:["",[this.spacesNotAllowed]]
      })
+  }
+
+
+  spacesNotAllowed(inputVal:any){
+     const value = inputVal.value;
+    let isIncludeSpace =  /\s{2,}/.test(value);
+    return isIncludeSpace ? { spaceNotAllowed: true } : null;
+    //value.toLowerCase().includes("clone") //to show err when clone word got enterd 
   }
   submit(){
     console.log(this.signUpForm.value);
