@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up-reactive-form',
@@ -11,6 +11,7 @@ export class SignUpReactiveFormComponent {
   signUpForm!: FormGroup;
   show:boolean=false;
   showPassword :boolean=false;
+  misMatch:boolean=false;
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -21,7 +22,7 @@ export class SignUpReactiveFormComponent {
   formLoad() {
 
      this.signUpForm = this.formBuilder.group({
-      name : ['Poonam',[Validators.required]],
+      name : ['',[Validators.required]],
       mobile : [989898989,[Validators.maxLength(10)]],
       pancard:['',[Validators.pattern('^[A-Z]{5}[0-9]{4}[A-Z]{1}$'),Validators.maxLength(10)]],
       email:[''],
@@ -37,6 +38,38 @@ export class SignUpReactiveFormComponent {
     let isIncludeSpace =  /\s{2,}/.test(value);
     return isIncludeSpace ? { spaceNotAllowed: true } : null;
     //value.toLowerCase().includes("clone") //to show err when clone word got enterd 
+  }
+
+  //passwordMatch(passwordValue:any){
+  //  console.log('........',this.signUpForm);
+    
+       // let passValue = passwordValue.value;
+      //  let confirmPass= this.signUpForm?.value?.confirmPass;
+      //   if(passValue.length >=5){
+      //   passValue != confirmPass ? {passwordNotMatched:true} : null;
+      //   }
+      //   return
+  //}
+      passwordMatchValidator() {
+        
+        const password = this.signUpForm.get('pass')?.value;
+        const confirmPassword = this.signUpForm.get('confirmPass')?.value;
+    
+        if (password != confirmPassword) {
+          this.misMatch= true ;
+        } else {
+          this.misMatch= false ;
+        }
+    
+        
+      }
+    
+   
+    
+    
+  
+  confirmPasswordMatch(){
+
   }
   submit(){
     console.log(this.signUpForm.value);
