@@ -8,18 +8,26 @@ import { Viewchild2Component } from '../viewchild2/viewchild2.component';
 })
 export class Viewchild1Component {
 
-@ViewChild ('city') cityName! : ElementRef
- @ViewChild(Viewchild2Component) viewCompo! : Viewchild2Component;
- constructor(private cdr: ChangeDetectorRef) { }
+  @ViewChild('city') cityName!: ElementRef
+  @ViewChild(Viewchild2Component) viewCompo!: Viewchild2Component;
+  @ViewChild('confirmation') confirmation! : ElementRef;
+  constructor(private cdr: ChangeDetectorRef) { }
 
-ngAfterViewInit(){
- 
-  console.log(this.cityName.nativeElement.innerHTML);
-  this.cityName.nativeElement.innerHTML = 'Pune';
-  console.log(this.cityName.nativeElement.innerHTML);
- // console.log("name",this.viewCompo.name);
- this.viewCompo.name = "Pooja"
- this.cdr.detectChanges();
-}
+
+  name1: any;
+  edit = false;
+  ngAfterViewInit() {
+
+    console.log(this.cityName.nativeElement.innerHTML);
+    this.cityName.nativeElement.innerHTML = 'Pune';
+    console.log(this.cityName.nativeElement.innerHTML);
+    // console.log("name",this.viewCompo.name);
+    this.name1 = this.viewCompo.name;
+    this.viewCompo.city = 'Nashik'
+    if(this.edit){
+      this.confirmation.nativeElement.innerHTML = 'Are you sure you Want Update this Record'
+    }
+    this.cdr.detectChanges();
+  }
 
 }

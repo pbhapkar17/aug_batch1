@@ -7,9 +7,6 @@ import { Component } from '@angular/core';
 })
 export class Viewchild2Component {
    name = "poonam";
-
-   setValue(){
-    console.log(name);
-    
-   }
+   city :any;
+  
 }

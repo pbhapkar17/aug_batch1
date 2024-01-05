@@ -14,6 +14,7 @@ import { Sub2Component } from './sub2/sub2.component';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
 import { SignUpReactiveFormComponent } from './sign-up-reactive-form/sign-up-reactive-form.component';
 import { Viewchild1Component } from './viewchild1/viewchild1.component';
+import { Viewchild2Component } from './viewchild2/viewchild2.component';
 
 const routes: Routes = [
   { path : '' , component : HomeComponent},
@@ -29,7 +30,8 @@ const routes: Routes = [
   { path: "subject2", component: Sub2Component},
   { path : "templateForm", component:TemplatedrivenformComponent},
   { path : 'signUpForm', component:SignUpReactiveFormComponent},
-  { path : 'viewChild1', component: Viewchild1Component}
+  { path : 'viewChild1', component: Viewchild1Component},
+  { path : 'viewChild2', component: Viewchild2Component}
 ];
 
 @NgModule({
