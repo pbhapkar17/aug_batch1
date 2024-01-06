@@ -21,6 +21,7 @@ import { SignUpReactiveFormComponent } from './sign-up-reactive-form/sign-up-rea
 import { NumbersOnlyDirective } from './numbers-only.directive';
 import { Viewchild1Component } from './viewchild1/viewchild1.component';
 import { Viewchild2Component } from './viewchild2/viewchild2.component';
+console.log("module calling...");
 
 @NgModule({
   declarations: [ //component/pipe/directive

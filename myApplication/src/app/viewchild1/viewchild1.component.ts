@@ -11,6 +11,7 @@ export class Viewchild1Component {
   @ViewChild('city') cityName!: ElementRef
   @ViewChild(Viewchild2Component) viewCompo!: Viewchild2Component;
   @ViewChild('confirmation') confirmation! : ElementRef;
+  
   constructor(private cdr: ChangeDetectorRef) { }
 
 
@@ -22,8 +23,8 @@ export class Viewchild1Component {
     this.cityName.nativeElement.innerHTML = 'Pune';
     console.log(this.cityName.nativeElement.innerHTML);
     // console.log("name",this.viewCompo.name);
-    this.name1 = this.viewCompo.name;
-    this.viewCompo.city = 'Nashik'
+    this.name1 = this.viewCompo.name;//get
+    this.viewCompo.city = 'Nashik';//set
     if(this.edit){
       this.confirmation.nativeElement.innerHTML = 'Are you sure you Want Update this Record'
     }

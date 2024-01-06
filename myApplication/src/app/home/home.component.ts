@@ -51,4 +51,10 @@ export class HomeComponent {
   purePipes(){
     this.pipe=true;
   }
+
+  adminSignup(){
+    this.router.navigateByUrl('admin/adminSignUp')
+  }
+
+
 }

@@ -31,7 +31,8 @@ const routes: Routes = [
   { path : "templateForm", component:TemplatedrivenformComponent},
   { path : 'signUpForm', component:SignUpReactiveFormComponent},
   { path : 'viewChild1', component: Viewchild1Component},
-  { path : 'viewChild2', component: Viewchild2Component}
+  { path : 'viewChild2', component: Viewchild2Component},
+  { path : 'admin', loadChildren:()=>import('./admin/admin.module').then(m=>m.AdminModule)}
 ];
 
 @NgModule({
