@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
@@ -9,10 +10,19 @@ export class DataService {
    userName:any;
   
    data = new Subject<any>();
-
-  constructor() { }
+   url='http://localhost:3000'
+  constructor(private httpClient : HttpClient) { }
 
 
 //service :to declare global property , reusable functions logic 
+
+  // getApiCall(endPoint:any){
+  //  return this.httpClient.get(this.)
+  // }
+
+  postApiCall(endPoint:any,formData:any){
+    let url = this.url + '/' + endPoint
+   return this.httpClient.post(url,formData);
+  }
 
 }

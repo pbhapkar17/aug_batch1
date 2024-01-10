@@ -1,0 +1,16 @@
+{
+  "user": [
+    {
+      "name": "poonam ",
+      "mobile": 989898989,
+      "pancard": "",
+      "email": "poonambhapkar34@gmail.com",
+      "pass": "poon",
+      "confirmPass": "poon",
+      "city": "Mumbai",
+      "id": 1
+    }
+  ],
+  "admin": [],
+  "owner": []
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-sign-up-reactive-form',
@@ -12,7 +13,8 @@ export class SignUpReactiveFormComponent {
   show:boolean=false;
   showPassword :boolean=false;
   misMatch:boolean=false;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder ,
+     private dataService :DataService ) { }
 
   ngOnInit() {
     this.formLoad()
@@ -40,16 +42,7 @@ export class SignUpReactiveFormComponent {
     //value.toLowerCase().includes("clone") //to show err when clone word got enterd 
   }
 
-  //passwordMatch(passwordValue:any){
-  //  console.log('........',this.signUpForm);
-    
-       // let passValue = passwordValue.value;
-      //  let confirmPass= this.signUpForm?.value?.confirmPass;
-      //   if(passValue.length >=5){
-      //   passValue != confirmPass ? {passwordNotMatched:true} : null;
-      //   }
-      //   return
-  //}
+ 
       passwordMatchValidator() {
         
         const password = this.signUpForm.get('pass')?.value;
@@ -72,7 +65,12 @@ export class SignUpReactiveFormComponent {
 
   }
   submit(){
+    let endPoint='user';
     console.log(this.signUpForm.value);
+    this.dataService.postApiCall(endPoint,this.signUpForm.value).subscribe(res=>{
+      console.log(res);
+      
+    })
     
   }
 
