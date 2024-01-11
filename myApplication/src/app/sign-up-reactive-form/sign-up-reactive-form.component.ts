@@ -70,12 +70,9 @@ export class SignUpReactiveFormComponent {
   //   this.dataService.postApiCall(endPoint,this.signUpForm.value).subscribe(res=>{
   //     this.postApiResponse  = res;
   //   })
-  //   if(this.postApiResponse?.id){
+
   //      this.router.navigateByUrl('home') ; 
-  //   }
-  //   else{
-  //     this.router.navigateByUrl('signUpForm')  ;
-  //   }
+
   // }
   async submit(){
     let endPoint='user';
