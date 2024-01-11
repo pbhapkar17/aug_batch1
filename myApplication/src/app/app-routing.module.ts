@@ -18,6 +18,7 @@ import { Viewchild2Component } from './viewchild2/viewchild2.component';
 
 const routes: Routes = [
   { path : '' , component : HomeComponent},
+  { path : 'home' , component : HomeComponent},
   { path : "login" , component : LoginComponent},
   { path : "signUp" , component : SignUpComponent},
   { path : "dataBinding", component: DatabindingComponent},
