@@ -10,7 +10,7 @@ export class DataService {
    userName:any;
   
    data = new Subject<any>();
-   url='http://localhost:3000'
+   url='http://localhost:3000';
   constructor(private httpClient : HttpClient) { }
 
 
@@ -21,8 +21,13 @@ export class DataService {
   // }
 
   postApiCall(endPoint:any,formData:any){
-    let url = this.url + '/' + endPoint
+    let url = this.url + '/' + endPoint;
    return this.httpClient.post(url,formData);
+  }
+
+  getApiCall(urlEndPoint : string){
+     let apiUrl = this.url + '/' + urlEndPoint + '/' + 2;
+    return this.httpClient.get(apiUrl);
   }
 
 }

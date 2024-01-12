@@ -11,33 +11,33 @@
       "id": 1
     },
     {
-      "name": "poonam Bha",
+      "name": "pooja",
       "mobile": 989898989,
       "pancard": "",
-      "email": "poonambhapkar34@gmail.com",
+      "email": "pooja@gmail.com",
       "pass": "",
       "confirmPass": "",
       "city": "Mumbai",
       "id": 2
     },
     {
-      "name": "poonam Bha",
+      "name": "Nitin",
       "mobile": 989898989,
       "pancard": "",
-      "email": "poonambhapkar34@gmail.com",
+      "email": "Nitin@gmail.com",
       "pass": "",
       "confirmPass": "",
       "city": "Mumbai",
       "id": 3
     },
     {
-      "name": "poonam Bha",
+      "name": "Mayank",
       "mobile": 989898989,
       "pancard": "",
-      "email": "poonambhapkar34@gmail.com",
+      "email": "Mayank@gmail.com",
       "pass": "",
       "confirmPass": "",
-      "city": "Mumbai",
+      "city": "Pune",
       "id": 4
     },
     {
@@ -89,8 +89,69 @@
       "confirmPass": "",
       "city": "Mumbai",
       "id": 9
+    },
+    {
+      "name": "jyoti",
+      "mobile": 989898989,
+      "pancard": "CTGPP4545P",
+      "email": "",
+      "pass": "ddd@3",
+      "confirmPass": "ddd@3",
+      "city": "nashik",
+      "id": 10
     }
   ],
-  "admin": [],
+  "admin": [
+    {
+      "name": "poonam Bha",
+      "mobile": 989898989,
+      "pancard": "",
+      "email": "poonambhapkar34@gmail.com",
+      "pass": "",
+      "confirmPass": "",
+      "city": "Mumbai",
+      "id": 1
+    },
+    {
+      "name": "pooja",
+      "mobile": 989898989,
+      "pancard": "",
+      "email": "pooja@gmail.com",
+      "pass": "",
+      "confirmPass": "",
+      "city": "Mumbai",
+      "id": 2
+    },
+    {
+      "name": "Nitin",
+      "mobile": 989898989,
+      "pancard": "",
+      "email": "Nitin@gmail.com",
+      "pass": "",
+      "confirmPass": "",
+      "city": "Mumbai",
+      "id": 3
+    },
+    {
+      "name": "Mayank",
+      "mobile": 989898989,
+      "pancard": "",
+      "email": "Mayank@gmail.com",
+      "pass": "",
+      "confirmPass": "",
+      "city": "Pune",
+      "id": 4
+    },
+    {
+      "name": "Abhijit",
+      "mobile": 989898989,
+      "pancard": "",
+      "email": "",
+      "pass": "",
+      "confirmPass": "",
+      "city": "Mumbai",
+      "id": 5
+    }
+  ],
   "owner": []
 }
