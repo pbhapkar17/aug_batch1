@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signin',
@@ -7,4 +8,20 @@ import { Component } from '@angular/core';
 })
 export class SigninComponent {
 
+   signInForm! : FormGroup;
+
+   constructor(private formBuilder:FormBuilder){
+
+   }
+  ngOnInit(){
+    this.formDetails()
+  }
+
+    formDetails(){
+      this.signInForm = this.formBuilder.group({
+        userName:['',[Validators.required]],
+        password:[]
+      })
+    }
+  
 }

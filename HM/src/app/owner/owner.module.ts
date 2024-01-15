@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { OwnerRoutingModule } from './owner-routing.module';
 import { OwnerlandingComponent } from './ownerlanding/ownerlanding.component';
-import {MatButtonModule} from '@angular/material/button';
+import { SharedModule } from '../shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [
     CommonModule,
     OwnerRoutingModule,
-    MatButtonModule
+    SharedModule
   ]
 })
 export class OwnerModule { }
