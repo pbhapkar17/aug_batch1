@@ -1,1 +1,60 @@
-<p>signup works!</p>
+<div class="form-container">
+{{apicallService.name}} --{{name1}}
+    <form [formGroup]="signUpForm">
+
+        <mat-form-field class="form-fields">
+            <mat-label>Full Name</mat-label>
+            <input type="text" matInput formControlName="fullName">
+
+            <mat-hint *ngIf="!signUpForm.get('fullName')?.touched"> Please enter your name here</mat-hint>
+            <mat-error *ngIf="signUpForm.get('fullName')?.errors?.['required'] && signUpForm.get('fullName')?.touched"  >Full Name is required</mat-error>
+    
+        </mat-form-field>
+       
+        <br>
+        <mat-form-field class="form-fields">
+            <mat-label>Mob No</mat-label>
+            <input type="text" matInput formControlName="mob">
+
+            <mat-hint>Please enter mob no </mat-hint>
+            <mat-error *ngIf="signUpForm.get('mob')?.errors?.['maxlength'] && signUpForm.get('mob')?.touched"> 
+                mob no should not more than 10 digits
+            </mat-error>
+            <mat-error *ngIf="signUpForm.get('mob')?.errors?.['pattern'] 
+            && signUpForm.get('mob')?.touched
+            && !signUpForm.get('mob')?.errors?.['maxlength'] ">
+                Invalid pattern
+            </mat-error>
+        </mat-form-field>
+       
+        <br>
+        <mat-label>Gender</mat-label>
+        <mat-radio-group formControlName="gender">
+            <mat-radio-button>Male</mat-radio-button>
+            <mat-radio-button>Female</mat-radio-button>
+        </mat-radio-group>
+
+        <br>
+        <mat-form-field class="form-fields">
+            <mat-label>Pan card</mat-label>
+            <input type="text" matInput formControlName="pan">
+            <mat-hint>Enter your Pan</mat-hint>
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="form-fields">
+            <mat-label>Password</mat-label>
+            <input type="text" matInput formControlName="password">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="form-fields">
+            <mat-label>Confirm Password</mat-label>
+            <input type="text" matInput formControlName="confirmPass">
+        </mat-form-field>
+
+        <br>
+        <button mat-raised-button color="accent" class="btn">Submit</button>
+
+    </form>
+</div>
