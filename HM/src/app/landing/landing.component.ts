@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApicallService } from '../shared/apicall.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class LandingComponent {
 
+constructor(private AapicallService : ApicallService){}
+
+  journey(journey:string){
+   this.AapicallService.journey = journey
+  }
 }

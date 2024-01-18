@@ -44,17 +44,26 @@
         <br>
         <mat-form-field class="form-fields">
             <mat-label>Password</mat-label>
-            <input type="text" matInput formControlName="password">
+            <input [type]="showPassword ? 'text' : 'password'" 
+             matInput formControlName="password"
+             (keyup)="matchPassword()">
+            <mat-icon matSuffix *ngIf="showPassword" (click)="showPass()">visibility</mat-icon>
+            <mat-icon matSuffix  *ngIf="!showPassword" (click)="showPass()"> visibility_off</mat-icon>
         </mat-form-field>
-
-        <br>
+        <!-- <mat-error *ngIf="isMatch"> password and confirm password should match</mat-error>
+        -->
+            <br> 
         <mat-form-field class="form-fields">
             <mat-label>Confirm Password</mat-label>
-            <input type="text" matInput formControlName="confirmPass">
+            <input [type]="showConfirmPassword ? 'text': 'password'" 
+            matInput formControlName="confirmPass"  (keyup)="matchPassword()">
+            <mat-icon matSuffix *ngIf="showConfirmPassword" (click)="showConfirmPass()">visibility</mat-icon>
+            <mat-icon matSuffix *ngIf="!showConfirmPassword" (click)="showConfirmPass()">visibility_off</mat-icon>
         </mat-form-field>
-
+        <mat-error *ngIf="isMatch"> password and confirm password should match</mat-error>
+       
         <br>
-        <button mat-raised-button color="accent" class="btn">Submit</button>
+        <button mat-raised-button color="accent" class="btn" (click)="submit()">Submit</button>
 
     </form>
 </div>

@@ -11,12 +11,16 @@ export class SignupComponent {
 
   signUpForm! : FormGroup;
   name1!: string;
- 
+  isMatch :boolean = false;
+  showPassword=false;
+  showConfirmPassword=false;
+  endPoint :any;
   constructor( private formBuilder: FormBuilder,
      public apicallService:ApicallService){}
 
   ngOnInit(){
-   this.name1= this.apicallService.name
+   this.name1= this.apicallService.name;
+   this.endPoint =  this.apicallService.journey;
     this.formDetails();
 
   }
@@ -28,7 +32,28 @@ export class SignupComponent {
       gender:[],
       pan:[],
       password:[],
-      confirmPass:[]
+      confirmPass:['']
     })
+}
+
+matchPassword(){
+  if(this.signUpForm.value.confirmPass != ''){
+    if(this.signUpForm.value.password == this.signUpForm.value.confirmPass){
+      this.isMatch = false;
+    }else{
+      this.isMatch = true;
+    }
+  }
+ 
+}
+showPass(){
+  this.showPassword =  !this.showPassword;
+}
+showConfirmPass(){
+  this.showConfirmPassword =  !this.showConfirmPassword;
+}
+
+submit(){
+
 }
 }
