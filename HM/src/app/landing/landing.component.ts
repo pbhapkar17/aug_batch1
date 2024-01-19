@@ -11,6 +11,6 @@ export class LandingComponent {
 constructor(private AapicallService : ApicallService){}
 
   journey(journey:string){
-   this.AapicallService.journey = journey
+   this.AapicallService.journey = journey;
   }
 }

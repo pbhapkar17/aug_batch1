@@ -1,7 +1,17 @@
-{ 
-"admin" : [],
-"owner " : [],
-"user" : [],
-"hotelDetails":[],
-"hotelBooking":[]
+{
+  "admin": [],
+  "owner": [
+    {
+      "id": "3198",
+      "fullName": "poonam",
+      "mob": null,
+      "gender": null,
+      "pan": null,
+      "password": "ssss",
+      "confirmPass": "ssss"
+    }
+  ],
+  "user": [],
+  "hotelDetails": [],
+  "hotelBooking": []
 }

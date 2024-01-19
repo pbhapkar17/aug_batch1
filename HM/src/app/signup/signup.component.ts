@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApicallService } from '../shared/apicall.service';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -16,12 +17,13 @@ export class SignupComponent {
   showConfirmPassword=false;
   endPoint :any;
   constructor( private formBuilder: FormBuilder,
-     public apicallService:ApicallService){}
+     public apicallService:ApicallService,private router:Router){}
 
   ngOnInit(){
    this.name1= this.apicallService.name;
-   this.endPoint =  this.apicallService.journey;
-    this.formDetails();
+   this.endPoint =  this.apicallService.journey; //admin/owner/user 
+ 
+   this.formDetails();
 
   }
 
@@ -54,6 +56,9 @@ showConfirmPass(){
 }
 
 submit(){
+this.apicallService.postApiCall(this.endPoint, this.signUpForm.value).subscribe(respo=>{
+   this.router.navigateByUrl('/owner/ownerSuccess')
+})
 
 }
 }

@@ -8,9 +8,11 @@ export class ApicallService {
   
    name='poonam';
   journey: any;
+  url = 'http://localhost:3000'
    constructor( private   httpClient :   HttpClient){}
 
-   postApiCall(){
-    //this.httpClient.post()
+   postApiCall(endPoint : string, formData:any){
+    let url = this.url + '/' + endPoint;
+    return  this.httpClient.post(url,formData)
    }
 }
