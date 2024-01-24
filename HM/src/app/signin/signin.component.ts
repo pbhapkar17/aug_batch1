@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ApicallService } from '../shared/apicall.service';
 
 @Component({
   selector: 'app-signin',
@@ -9,11 +10,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class SigninComponent {
 
    signInForm! : FormGroup;
-
-   constructor(private formBuilder:FormBuilder){
+   journey :any;
+   data:any
+   constructor(private formBuilder:FormBuilder, private apicallService: ApicallService){
 
    }
   ngOnInit(){
+   this.journey = this.apicallService.journey; //user/owner/admin
+   this.getData()
     this.formDetails()
   }
 
@@ -23,5 +27,17 @@ export class SigninComponent {
         password:[]
       })
     }
-  
+
+    submit(){
+
+    }
+
+    getData(){  //get api call u/a/o
+      this.apicallService.getApiCall(this.journey).subscribe(respo=>{
+        this.data = respo;
+        console.log('this.data ',this.data );
+      })
+   
+      
+    }
 }

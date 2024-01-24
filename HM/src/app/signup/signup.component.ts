@@ -57,7 +57,15 @@ showConfirmPass(){
 
 submit(){
 this.apicallService.postApiCall(this.endPoint, this.signUpForm.value).subscribe(respo=>{
-   this.router.navigateByUrl('/owner/ownerSuccess')
+ 
+  if(this.endPoint ==='admin'){
+     this.router.navigateByUrl('/admin/adminSuccess')
+  }else if(this.endPoint === 'owner'){
+    this.router.navigateByUrl('/owner/ownerSuccess')
+  }
+  else{
+    this.router.navigateByUrl('/user/userSuccess')
+  }
 })
 
 }
