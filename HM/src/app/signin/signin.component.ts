@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApicallService } from '../shared/apicall.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -11,8 +12,11 @@ export class SigninComponent {
 
    signInForm! : FormGroup;
    journey :any;
-   data:any
-   constructor(private formBuilder:FormBuilder, private apicallService: ApicallService){
+   data:any;
+   validUser:any;
+   notValidUser: boolean =false;
+   constructor(private formBuilder:FormBuilder, 
+    private apicallService: ApicallService, private router: Router){
 
    }
   ngOnInit(){
@@ -29,15 +33,31 @@ export class SigninComponent {
     }
 
     submit(){
-
+     this.validUser =[]
+      this.data.find((ele:any)=>{
+        if(this.signInForm.value.userName  == ele.fullName && this.signInForm.value.password == ele.password){
+          this.validUser.push(ele);
+        }
+      })
+      if(this.validUser.length > 0){
+         if(this.journey =='admin'){
+          this.router.navigateByUrl('/admin/adminSuccess')
+         }
+         else if(this.journey == 'user'){
+          this.router.navigateByUrl('/user/userSuccess') 
+         }
+         else{
+          this.router.navigateByUrl('/owner/ownerSuccess')
+         }
+      }else{
+       this.notValidUser = true;
+      }
     }
 
     getData(){  //get api call u/a/o
       this.apicallService.getApiCall(this.journey).subscribe(respo=>{
         this.data = respo;
         console.log('this.data ',this.data );
-      })
-   
-      
+      })  
     }
 }
