@@ -109,6 +109,26 @@
       "hotelAddress": "Thane",
       "hotelMob": "777777777",
       "hotelMenu": "nonveg"
+    },
+    {
+      "id": "0c28",
+      "ownerName": "poonam",
+      "mob": "333333",
+      "password": "poo@123",
+      "hotelName": "hotel Nagara",
+      "hotelAddress": "Thane",
+      "hotelMob": "777777777",
+      "hotelMenu": "nonveg"
+    },
+    {
+      "id": "0c28",
+      "ownerName": "poonam",
+      "mob": "333333",
+      "password": "poo@123",
+      "hotelName": "hotel sani",
+      "hotelAddress": "Thane",
+      "hotelMob": "777777777",
+      "hotelMenu": "nonveg"
     }
   ],
   "hotelBooking": []

@@ -34,13 +34,16 @@ export class SigninComponent {
     }
 
     submit(){
-     this.validUser =[]
+   //  this.validUser =[]
+      let isValidUser = false;
       this.data.find((ele:any)=>{
         if(this.signInForm.value.userName  == ele.fullName && this.signInForm.value.password == ele.password){
-          this.validUser.push(ele);
+          //this.validUser.push(ele);
+          isValidUser = true;
         }
       })
-      if(this.validUser.length > 0){
+      if(isValidUser){
+        this.apicallService.userName = this.signInForm.value.userName;
          if(this.journey =='admin'){
           this.router.navigateByUrl('/admin/adminSuccess')
          }

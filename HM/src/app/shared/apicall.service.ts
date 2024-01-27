@@ -6,9 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class ApicallService {
   
-   name='poonam';
+  name='poonam';
   journey: any;
+  userName: any;
+
   url = 'http://localhost:3000'
+ 
    constructor( private httpClient : HttpClient){}
 
    postApiCall(endPoint : string, formData:any){
