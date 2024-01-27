@@ -10,12 +10,14 @@ import { LandingComponent } from './landing/landing.component';
 import { SharedModule } from './shared/shared.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     SigninComponent,
-    LandingComponent
+    LandingComponent,
+    
   ],
   imports: [
     BrowserModule,

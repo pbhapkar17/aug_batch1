@@ -59,6 +59,57 @@
       "confirmPass": ""
     }
   ],
-  "hotelDetails": [],
+  "hotelDetails": [
+    {
+      "id": "c389",
+      "ownerName": "nitin",
+      "mob": "55456666",
+      "password": "nitin@123",
+      "hotelName": "hotel Taj",
+      "hotelAddress": "Mumbai",
+      "hotelMob": "98989898",
+      "hotelMenu": "veg,nonveg"
+    },
+    {
+      "id": "f056",
+      "ownerName": "nitin",
+      "mob": "66666",
+      "password": "nitin@123",
+      "hotelName": "hotel Sonpari",
+      "hotelAddress": "Pune",
+      "hotelMob": "98989898",
+      "hotelMenu": "veg,nonveg"
+    },
+    {
+      "id": "dc61",
+      "ownerName": "nitin",
+      "mob": "66666",
+      "password": "nitin@123",
+      "hotelName": "hotel Shivshahi",
+      "hotelAddress": "Satara",
+      "hotelMob": "3333333",
+      "hotelMenu": "veg,nonveg"
+    },
+    {
+      "id": "9d46",
+      "ownerName": "nitin",
+      "mob": "66666",
+      "password": "nitin@123",
+      "hotelName": "hotel maharaja",
+      "hotelAddress": "nashik",
+      "hotelMob": "68886666",
+      "hotelMenu": "veg,nonveg"
+    },
+    {
+      "id": "0c28",
+      "ownerName": "poonam",
+      "mob": "333333",
+      "password": "poo@123",
+      "hotelName": "hotel sadagi",
+      "hotelAddress": "Thane",
+      "hotelMob": "777777777",
+      "hotelMenu": "nonveg"
+    }
+  ],
   "hotelBooking": []
 }

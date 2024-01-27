@@ -5,12 +5,14 @@ import { OwnerRoutingModule } from './owner-routing.module';
 import { OwnerlandingComponent } from './ownerlanding/ownerlanding.component';
 import { SharedModule } from '../shared/shared.module';
 import { OwnerSuccessComponent } from './owner-success/owner-success.component';
+import { HotelRegisterComponent } from './hotel-register/hotel-register.component';
 
 
 @NgModule({
   declarations: [
     OwnerlandingComponent,
-    OwnerSuccessComponent
+    OwnerSuccessComponent,
+    HotelRegisterComponent
   ],
   imports: [
     CommonModule,
