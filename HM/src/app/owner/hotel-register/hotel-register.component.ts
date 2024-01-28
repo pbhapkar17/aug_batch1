@@ -12,23 +12,25 @@ export class HotelRegisterComponent {
 
   hotelRegForm!:FormGroup;
   showPassword: boolean=false;
-  hotelEndPoint = 'hotelDetails'
+  hotelEndPoint = 'hotelDetails';
+  dataById :any;
   constructor(private fb: FormBuilder , private apicallService: ApicallService,
     private router: Router){}
 
   ngOnInit(){
+    this.dataById = this.apicallService.dataById
     this.hotelDetailsForm()
   }
 
   hotelDetailsForm(){
     this.hotelRegForm = this.fb.group({
-      ownerName:[],
-      mob: [],
-      password:[],
-      hotelName: [],
-      hotelAddress:[],
-      hotelMob:[],
-      hotelMenu:[]
+      ownerName:[ this.dataById ?  this.dataById?.ownerName : ''],
+      mob: [this.dataById ?  this.dataById?.mob : ''],
+      password:[this.dataById ?  this.dataById?.password : ''],
+      hotelName: [this.dataById ?  this.dataById?.hotelName : ''],
+      hotelAddress:[this.dataById ?  this.dataById?.hotelAddress : ''],
+      hotelMob:[this.dataById ?  this.dataById?.hotelMob : ''],
+      hotelMenu:[this.dataById ?  this.dataById?.hotelMenu : '']
 
     })
   }
@@ -39,6 +41,10 @@ export class HotelRegisterComponent {
     }) 
 
   }
+  async update(){
+  let respo =  await this.apicallService.updateData('hotelDetails',this.dataById?.id,this.hotelRegForm.value).toPromise()
+  this.router.navigateByUrl('/owner/ownerSuccess');
+}
   showPass(){
     this.showPassword =  !this.showPassword;
   }

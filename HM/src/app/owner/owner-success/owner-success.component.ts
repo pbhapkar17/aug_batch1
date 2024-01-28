@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApicallService } from 'src/app/shared/apicall.service';
 
 @Component({
@@ -10,13 +11,15 @@ export class OwnerSuccessComponent {
   hotelData:any;
   userName:any;
   hotelsByOwner:any
-  showData: boolean =false; 
+  showData: boolean = false; 
+  endPoint :any;
   headers = ['Owner Name','Owner Contact','Hotel Name', 'Hotel Address', 'Hotel Contact', 'Hotel Menu','Edit','Delete']
-constructor(private apicallService: ApicallService){
+constructor(private apicallService: ApicallService,private router: Router){
 
 }
 
 ngOnInit(){
+ this.endPoint = 'hotelDetails'
   this.userName = this.apicallService.userName;
   this.getHotelDetails();
 
@@ -31,7 +34,7 @@ this.apicallService.getApiCall('hotelDetails').subscribe(data=>{
   viewHotels(){
     this.hotelsByOwner = []
       if(this.hotelData ){
-        this.showData = true
+       
         this.hotelData.forEach((item:any)=>{
           if(item.ownerName == this.userName){
       
@@ -39,7 +42,22 @@ this.apicallService.getApiCall('hotelDetails').subscribe(data=>{
           }
         })
       }
+      if( this.hotelsByOwner.length > 0){
+        this.showData = true
+   
+      }
       console.log('this.hotelsByOwner',this.hotelsByOwner);
       
+  }
+ async edit(id:any){
+
+  this.apicallService.dataById = await this.apicallService.getApiCall(this.endPoint, id).toPromise()
+  console.log('  this.apicallService.dataById)',  this.apicallService.dataById)
+  
+  this.router.navigateByUrl('/owner/hotelRegister')
+
+  }
+  reg(){
+    this.apicallService.dataById = null;
   }
 }

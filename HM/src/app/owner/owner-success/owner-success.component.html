@@ -1,4 +1,4 @@
-<button  mat-raised-button color="accent" routerLink="/owner/hotelRegister">New Hotel Register</button>
+<button  mat-raised-button color="accent"(click)=reg() routerLink="/owner/hotelRegister">New Hotel Register</button>
 <button  mat-raised-button color="accent" (click)="viewHotels()" >View My Hotels</button>
 
 
@@ -14,7 +14,7 @@
         <td>{{hotelData.hotelAddress}}</td>
         <td>{{hotelData.hotelMob}}</td>
         <td>{{hotelData.hotelMenu}}</td>
-        <td><mat-icon>edit</mat-icon></td>
+        <td><mat-icon (click)="edit(hotelData.id)">edit</mat-icon></td>
         <td><mat-icon>delete</mat-icon></td>
     </tr>
 </table>
