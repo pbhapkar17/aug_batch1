@@ -29,4 +29,8 @@ export class ApicallService {
    let url = this.url + '/' + endPoint +'/' + id;
    return this.httpClient.patch(url,body)
   }
+  deleteAPiCall(endPoint:any,id:any){
+    let url = this.url + '/' + endPoint +'/' + id;
+    return this.httpClient.delete(url);
+  }
 }

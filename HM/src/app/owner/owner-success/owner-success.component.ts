@@ -25,10 +25,8 @@ ngOnInit(){
 
 }
 
-getHotelDetails(){
-this.apicallService.getApiCall('hotelDetails').subscribe(data=>{
-   this.hotelData = data;
-})
+async getHotelDetails(){
+  this.hotelData =   await this.apicallService.getApiCall('hotelDetails').toPromise()
 }
 
   viewHotels(){
@@ -59,5 +57,10 @@ this.apicallService.getApiCall('hotelDetails').subscribe(data=>{
   }
   reg(){
     this.apicallService.dataById = null;
+  }
+ async delete(id:any){
+  let res = await this.apicallService.deleteAPiCall('hotelDetails',id).toPromise();
+    this.getHotelDetails();
+    this.viewHotels()
   }
 }
