@@ -1,0 +1,19 @@
+
+<button mat-raised-button color="accent" (click)="viewHotels()">View Hotel List</button>
+
+<div *ngIf="showData">
+    <table>
+        <tr>
+            <th *ngFor="let headings of headers">{{headings}}</th>
+        </tr>
+        <tr *ngFor="let hotelData of hotelData">
+            <td>{{hotelData.ownerName}}</td>
+        <td>{{hotelData.mob}}</td>
+        <td>{{hotelData.hotelName}}</td>
+        <td>{{hotelData.hotelAddress}}</td>
+        <td>{{hotelData.hotelMob}}</td>
+        <td>{{hotelData.hotelMenu}}</td>
+        <td><button (click)="bookNow()">Book Now</button></td>
+        </tr>
+    </table>
+</div>

@@ -30,7 +30,8 @@ export class HotelRegisterComponent {
       hotelName: [this.dataById ?  this.dataById?.hotelName : ''],
       hotelAddress:[this.dataById ?  this.dataById?.hotelAddress : ''],
       hotelMob:[this.dataById ?  this.dataById?.hotelMob : ''],
-      hotelMenu:[this.dataById ?  this.dataById?.hotelMenu : '']
+      hotelMenu:[this.dataById ?  this.dataById?.hotelMenu : ''],
+      imageField:[]
 
     })
   }
@@ -48,4 +49,11 @@ export class HotelRegisterComponent {
   showPass(){
     this.showPassword =  !this.showPassword;
   }
+  openInput(){ 
+    document?.getElementById("fileInput")?.click();
+}
+fileChange(file:any){
+console.log('file',file.target.value);
+
+}
 }

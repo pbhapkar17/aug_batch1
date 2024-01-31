@@ -61,46 +61,6 @@
   ],
   "hotelDetails": [
     {
-      "id": "1",
-      "ownerName": "nitin",
-      "mob": "333333333333",
-      "password": "nitin@123",
-      "hotelName": "hotel Taj",
-      "hotelAddress": "Mumbai",
-      "hotelMob": "3333333333",
-      "hotelMenu": "veg,nonveg"
-    },
-    {
-      "id": "2",
-      "ownerName": "nitin",
-      "mob": "66666",
-      "password": "nitin@123",
-      "hotelName": "hotel Sonpari",
-      "hotelAddress": "Pune",
-      "hotelMob": "98989898",
-      "hotelMenu": "veg,nonveg"
-    },
-    {
-      "id": "3",
-      "ownerName": "nitin",
-      "mob": "555555",
-      "password": "nitin@123",
-      "hotelName": "hotel Shivshahi",
-      "hotelAddress": "Satara",
-      "hotelMob": "5555555",
-      "hotelMenu": "veg,nonveg"
-    },
-    {
-      "id": "4",
-      "ownerName": "nitin",
-      "mob": "77777",
-      "password": "nitin@123",
-      "hotelName": "hotel maharaja",
-      "hotelAddress": "nashik",
-      "hotelMob": "77777777777",
-      "hotelMenu": "veg,nonveg"
-    },
-    {
       "id": "5",
       "ownerName": "poonam",
       "mob": "333333",
@@ -129,6 +89,28 @@
       "hotelAddress": "Thane",
       "hotelMob": "777777777",
       "hotelMenu": "nonveg"
+    },
+    {
+      "id": "8050",
+      "ownerName": "",
+      "mob": "",
+      "password": "",
+      "hotelName": "",
+      "hotelAddress": "",
+      "hotelMob": "",
+      "hotelMenu": "",
+      "imageField": null
+    },
+    {
+      "id": "c63d",
+      "ownerName": "",
+      "mob": "",
+      "password": "",
+      "hotelName": "",
+      "hotelAddress": "",
+      "hotelMob": "",
+      "hotelMenu": "",
+      "imageField": null
     }
   ],
   "hotelBooking": []

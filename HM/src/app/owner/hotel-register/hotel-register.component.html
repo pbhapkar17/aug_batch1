@@ -75,7 +75,9 @@
                 hotel Menu is required</mat-error>
         </mat-form-field>
         <br>
-
+        <button mat-raised-button (click)="openInput()">Select File to Upload</button>
+        <input id="fileInput" hidden type="file" (change)="fileChange($event)" name="file">
+          <br>
         <button mat-raised-button color="accent" class="btn" (click)="submit()" *ngIf="!dataById">Submit</button>
         <button mat-raised-button color="accent" class="btn" (click)="update()" *ngIf="dataById">Update</button>
     </form>
