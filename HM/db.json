@@ -90,27 +90,17 @@
       "hotelMob": "777777777",
       "hotelMenu": "nonveg"
     },
+          
     {
-      "id": "8050",
-      "ownerName": "",
-      "mob": "",
-      "password": "",
-      "hotelName": "",
-      "hotelAddress": "",
-      "hotelMob": "",
-      "hotelMenu": "",
-      "imageField": null
-    },
-    {
-      "id": "c63d",
-      "ownerName": "",
-      "mob": "",
-      "password": "",
-      "hotelName": "",
-      "hotelAddress": "",
-      "hotelMob": "",
-      "hotelMenu": "",
-      "imageField": null
+      "id": "be87",
+      "ownerName": "nitin",
+      "mob": "66666666",
+      "password": "niT",
+      "hotelName": "RAJ",
+      "hotelAddress": "Mumbai",
+      "hotelMob": "98989898",
+      "hotelMenu": "veg",
+      "imageField": "assets/Images/hotel2.jpg"
     }
   ],
   "hotelBooking": []

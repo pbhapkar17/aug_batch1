@@ -53,7 +53,7 @@ export class HotelRegisterComponent {
     document?.getElementById("fileInput")?.click();
 }
 fileChange(file:any){
-console.log('file',file.target.value);
-
+   let imgName = "assets/Images/"+ file.target.value.slice(12)
+   this.hotelRegForm.patchValue({imageField:imgName})
 }
 }
