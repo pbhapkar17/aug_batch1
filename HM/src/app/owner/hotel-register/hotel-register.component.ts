@@ -37,6 +37,7 @@ export class HotelRegisterComponent {
   }
 
   submit(){
+    
     this.apicallService.postApiCall(this.hotelEndPoint,this.hotelRegForm.value).subscribe(respo=>{
        this.router.navigateByUrl('/owner/ownerSuccess')
     }) 

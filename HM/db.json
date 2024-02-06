@@ -1,13 +1,22 @@
 {
   "admin": [
     {
-      "id": "4c7c",
+      "id": "1",
       "fullName": "",
       "mob": null,
       "gender": null,
       "pan": null,
       "password": null,
       "confirmPass": ""
+    },
+    {
+      "id": "2",
+      "fullName": "poonam",
+      "mob": null,
+      "gender": null,
+      "pan": null,
+      "password": "poo@123",
+      "confirmPass": "ssss"
     }
   ],
   "owner": [
@@ -17,7 +26,7 @@
       "mob": null,
       "gender": null,
       "pan": null,
-      "password": "ssss",
+      "password": "poo@123",
       "confirmPass": "ssss"
     },
     {
@@ -50,6 +59,15 @@
       "confirmPass": "jay@123"
     },
     {
+      "id": "3198",
+      "fullName": "poonam",
+      "mob": null,
+      "gender": null,
+      "pan": null,
+      "password": "poo@123",
+      "confirmPass": "ssss"
+    },
+    {
       "id": "7604",
       "fullName": "",
       "mob": null,
@@ -68,7 +86,8 @@
       "hotelName": "hotel sadagi",
       "hotelAddress": "Thane",
       "hotelMob": "777777777",
-      "hotelMenu": "nonveg"
+      "hotelMenu": "nonveg",
+      "imageField": "assets/Images/hotel4.jpg"
     },
     {
       "id": "6",
@@ -78,7 +97,8 @@
       "hotelName": "hotel Nagara",
       "hotelAddress": "Thane",
       "hotelMob": "777777777",
-      "hotelMenu": "nonveg"
+      "hotelMenu": "nonveg",
+      "imageField": "assets/Images/hotel3.jpeg"
     },
     {
       "id": "7",
@@ -88,7 +108,8 @@
       "hotelName": "hotel sani",
       "hotelAddress": "Thane",
       "hotelMob": "777777777",
-      "hotelMenu": "nonveg"
+      "hotelMenu": "nonveg",
+      "imageField": "assets/Images/hotel1.jpeg"
     },
           
     {

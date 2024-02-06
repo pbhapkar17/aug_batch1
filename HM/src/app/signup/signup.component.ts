@@ -34,7 +34,8 @@ export class SignupComponent {
       gender:[],
       pan:[],
       password:[],
-      confirmPass:['']
+      confirmPass:[''],
+     // tc:[]
     })
 }
 
@@ -56,6 +57,12 @@ showConfirmPass(){
 }
 
 submit(){
+  // this.signUpForm.value.tc == true ? this.signUpForm.value.patchValue({
+  //   tc :'Accept'
+  // }) : this.signUpForm.value.patchValue({
+  //   tc :'Not Accept'
+  // })
+
 this.apicallService.postApiCall(this.endPoint, this.signUpForm.value).subscribe(respo=>{
  
   if(this.endPoint ==='admin'){
